@@ -1,0 +1,32 @@
+doctype html
+
+html(lang="en")
+head
+	title Mobile Survey Form by PUG
+	link(rel='stylesheet'
+		 type='text/css'
+		 href='css/surveystyle.css'
+		 media='screen')
+		 
+body 
+	h2 Welcome to the Mobile Purchasing Survey (PUG Version)
+	form(action='survey' method='POST')
+		fieldset
+			legend Mobile Purchasing Survey
+			h4 your gender:
+			label 
+				input(type="radio" name="gender" value = 1 checked)
+				|Female
+				br
+			label 
+				input(type="radio" name="gender" value = 0) 
+				|Male
+				br
+			h4 What would be your next mobile?
+			each product,idx in products
+				input(type="radio" name="vote" value= idx) 
+				label=product
+				br
+			input(type = "submit" value = "Submit Vote")
+			|  
+			input(type = "reset" value = "Clear Vote Form")

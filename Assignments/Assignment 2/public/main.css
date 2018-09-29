@@ -1,0 +1,56 @@
+.btn {
+  margin-right: 3px;
+}
+
+.col-sm-6{
+  padding-left:100px;
+  padding-right:100px;
+}
+
+/* header*/
+.jumbotron {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.jumbotron p{
+  color: #ffffff;
+  text-align: center;
+}
+
+/* image section*/
+#img_section h2{
+  
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* form status*/
+#loginStatus{
+  margin-top:10px;
+  color:red;
+  font-size:1.5em;
+}
+
+#registerStatus{
+  margin-top:10px;
+  color:green;
+  font-size:1.5em;
+}
+
+/*footer*/
+footer{
+  margin-top:30px;
+  background-color: black;
+  font-size: 0.5em;
+}
+
+footer p{
+  margin-top:10px;
+  color: white;
+  font-size: 0.8em;
+}

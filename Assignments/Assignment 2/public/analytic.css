@@ -1,0 +1,70 @@
+.btn {
+  margin-left: 3px;
+}
+
+
+div.row{
+  font-size: 1.2em;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+div.row_section{
+  margin-left:50px;
+  margin-right:50px;
+}
+
+/*navigation bar*/
+nav{
+  font-size:200%;
+}
+
+.navbar-brand{
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+/* section display default*/
+#individual_section{
+  display:none;
+}
+
+#article_section{
+  display:none;
+}
+
+/* individual section*/
+#dataUpdateDisplay{
+  color:red;
+}
+
+/* article section*/
+#articleUserDisplayHead{
+  font-weight: bold;
+  border-bottom:1px solid black;
+}
+
+.articleUserDisplayRow{
+  padding: 5px;
+  border-bottom:2px solid #DCDCDC;
+}
+
+.articleUserDisplayInnerRow{
+  padding-top: 2px;
+  border-bottom: 1px dotted #DCDCDC; 
+  font-size: 0.9em;
+}
+
+/*footer*/
+footer{
+  margin-top:30px;
+  background-color: black;
+  font-size: 0.5em;
+}
+
+footer p{
+  margin-top:10px;
+  color: white;
+  font-size: 0.8em;
+}

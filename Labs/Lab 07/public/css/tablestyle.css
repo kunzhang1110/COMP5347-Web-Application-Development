@@ -1,0 +1,13 @@
+table {
+   border: collapse;
+   border-spacing: 0;
+
+}
+
+table tbody td{
+   border-top: 1pt solid #95BEF0;
+   line-height: 1.5em;
+   vertical-align: middle;
+   padding: 0.5em 0.75em;
+}
+

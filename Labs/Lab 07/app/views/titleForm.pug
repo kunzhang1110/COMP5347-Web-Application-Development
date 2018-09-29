@@ -1,0 +1,13 @@
+doctype html
+
+html(lang="en")
+head
+	title Simple Form to allow user input a title	 
+body 
+	h2 Simple Form 
+	form(action='/revision/getLatest' method='GET')
+			label Title: 
+				input(type="text" name="title")
+			input(type = "submit" value = "Search")
+			|  
+			input(type = "reset" value = "Clear")

@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+  head
+    title WikiLatic - Wiki Anlaytic on Web
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet" href="./main.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="./main.js")
+  
+  body
+    div.container-fluid
+      div.jumbotron
+        h1 WikiLatic - Wiki Anlaytic on Web
+        p WikiLatic is a web application that analyzes revisions on wikipedia articles. Analysis are performed in overall, individual and article level.
+      div.row(id="img_section")
+        div(class="col-sm-6")
+          h2 Visualize data with pie charts and column charts!
+          img(src="/img/image1.png")
+        div(class="col-sm-6")
+          h2 Examine actual data with ease!
+          img(src="/img/image3.png")
+      hr
+      div.row
+        div(class="col-sm-6")
+          h2 Please Log In 
+          form(action='/login' method='POST' id='loginForm')
+            div.form-group
+              label Username: 
+              input(class="form-control" type="text" name="username" placeholder="Enter Username")
+            div.form-group
+              label Password: 
+              input(class="form-control" type="password" name="password" placeholder="Enter password")
+            input(class="btn btn-default btn-lg" type = "submit" value = "Login")
+            input(class="btn btn-default btn-lg" type = "reset" value = "Clear")
+            div(id="loginStatus")
+        div(class="col-sm-6")
+          h2 Please Sign Up
+          form(action='/signup' method='POST' id='signupForm')
+            div.form-group        
+              label First Name: 
+              input(class="form-control" type="text" name="firstname" pattern="[A-Z]{1}[a-z]+" title="Please enter a valid first name")
+            div.form-group
+              label Last Name: 
+              input(class="form-control" type="text" name="lastname" pattern="[A-Z]{1}[a-z]+" title="Please enter a valid first name")
+            div.form-group
+              label Email Address: 
+              input(class="form-control" type="email" name="emailaddress")
+            div.form-group
+              label Username: 
+              input(class="form-control" type="text" name="username")
+            div.form-group
+              label Password: 
+              input(class="form-control" type="password" name="password")
+            input(class="btn btn-default btn-lg" type="submit" value = "Sign up")
+            input(class="btn btn-default btn-lg" type="reset" value = "Clear")
+            div(id="registerStatus")
+            
+  footer(class="container-fluid text-center")
+    p WikiLatic written by Kun Zhang

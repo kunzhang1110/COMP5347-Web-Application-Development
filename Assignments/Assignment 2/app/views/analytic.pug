@@ -1,0 +1,122 @@
+doctype html
+html(lang="en")
+  head
+    title WikiLatic - Wiki Anlaytic on Web
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet" href="./analytic.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://www.gstatic.com/charts/loader.js") //Google Chart
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="./analytic.js")
+  
+      
+      
+  body
+    nav(class="navbar navbar-inverse")
+      div.container-fluid
+        div.navbar-header
+          span(class="navbar-brand")|WikiLatic
+        ul(class="nav navbar-nav")
+          li
+            a(id="overview_link" href="#overview_section")|Overview
+          li
+            a(id="individual_link" href="#individual_section")|Individual
+          li
+            a(id="article_link" href="#article_section")|Article
+
+    div.container-fluid
+      div(class="row row_section" id="overview_section")
+        h1 Overview
+        hr 
+        div.row
+          h2 Titles of the articles with highest/lowest number of revisions
+          div(class="col-sm-6")
+            h3 Highest
+            div#highestRevision 
+          div(class="col-sm-6")
+            h3 Lowest
+            div#lowestRevision
+          div(class="col-sm-12")
+            label Enter Numbers of titles to be displayed:
+            form.form-inline
+              input(class="form-control" type="number" name="revisionLimitTextbox" id="revisionLimitTextbox"
+              placeholder="3")
+              input(class="btn btn-default btn-md" type="button" name="revisionLimitButton" 
+              id="revisionLimitButton" value="Submit" )  
+        hr
+        div.row
+          h2 The article edited by largest/smallest group of register users
+          div(class="col-sm-6")
+            h3 Largest
+            div#largestGroupUser 
+          div(class="col-sm-6")
+            h3 Smallest
+            div#samllestGroupUser 
+        hr
+        div.row
+          h2 Top 3 articles with longest/shortest history
+          div(class="col-sm-6")
+            h3 Longest
+            div#longestHistory 
+          div(class="col-sm-6")
+            h3 Shortest
+            div#shortestHistory 
+        hr
+        div.row
+          h2 Distribution Charts
+          div(class="col-sm-12")
+            h3 Revision number distribution by user type
+            a(href='/findUsertypeDistribution' id='usertypeDistributionPie') Show
+            h3 Revision number distribution by year and by user type
+            a(href='/findUsertypeDistributionByYear' id='yearDistributionColumn') Show
+          div(class="col-sm-12")        
+            div#overviewChart
+
+      div.row(class="row row_section" id="individual_section")
+        h1 Individual
+        hr 
+        div.row
+          h2 Top 5 Users of Article
+          div(class="col-sm-12")
+            label Select an Article:
+            form.form-inline
+              select#titleList(class="custom-select")
+              input(class="btn btn-default btn-md" type="button" name="articleSelectButton" id="articleSelectButton" value="Submit" )
+              div#dataUpdateDisplay
+              div#articleTopUsers
+        hr
+        div.row
+          h2 Distribution Charts
+          div(class="col-sm-12")
+            h3 Ariticle Revision Distribution by year and user type 
+            a(href='/findArticleDistributionYear' id='articleDistributionYearColumn') Show
+            h3 Ariticle Revision Distribution by user type
+            a(href='/findArticleDistributionUsertype' id='articleDistributionUsertypePie') Show 
+            h3 Ariticle Revision Distribution by top 5 user by year
+            label Select a user:
+            form.form-inline
+              select#userList(class="custom-select")
+              br
+              a(href='/findArticleDistributionByUser' id='articleDistributionByUserColumn') Show 
+          div.row
+            div(class="col-sm-12")
+              div#individualChart
+
+      div.row(class="row row_section" id="article_section") 
+        h1 Article Analysis
+        hr 
+        div.row 
+          div(class="col-sm-12") 
+          label Please Enter User Name:
+          form.form-inline
+            input(type="text" name="authorNameText" id="authorNameText")
+            input(type="button" name="authorNameButton" id="authorNameButton" value="Submit" class="btn btn-default btn-md" )
+        div#articleUserDisplay
+    
+    footer(class="container-fluid text-center")
+      p WikiLatic written by Kun Zhang
+
+  
+  
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>COMP5347 Assignment One</title>
+   <link rel="stylesheet" href="index.css">
+   <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<form method="get" action="">
+  <!--Serach Box-->
+  <div id="searchBox">
+    <input type="text" id="search_textbox" placeholder="Search..." name="search_textbox"  />
+    <input type="button" id="search_button" value="Search" name="search_button" />
+    <select id="category">
+      <option>Category</option>
+    </select>
+    <input type="button" id="filter_button" value="Filter" name="filter_button" />
+    <!--elements to the right of the search bar -->
+    <span class="searchBox_right" id="cart_number">(0)</span>
+    <!--<img  class="searchBox_right" id="shopping-cart" src="./images/shopping-cart.png" height="22" width="22" />-->
+    <svg height="22" width="22" class="searchBox_right" id="shopping-cart">
+        <polyline id="cart_body" points="0,0,5,0,7,12,18,12,20.5,2.5" />
+        <circle id="wheel_left" cx="9" cy="15" r="2" />
+        <circle id="wheel_right" cx="16.5" cy="15" r="2" />
+        <path id="plus" d="M 10.5 6 L 15.5 6 M13 3 L13 9" />
+    </svg>  
+    <input type="button" class="searchBox_right" id= "reset_button" name="reset_button" value="Reset the Cart"/>
+    <input type="button" class="searchBox_right" id="add_button" name="add_button" value="Add to Cart"/>
+  </div>  <!--Serach Box ENDS-->
+
+  <!--List Box-->
+  <div id="listBox">
+    <table>
+      <caption>Online Book Store</caption>
+      <thead>
+        <tr>
+          <th colspan="3">Title</th>
+          <th>Aurthors</th>
+          <th>Year</th>
+          <th>Price</th>
+          <th>Publisher</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody><tr id="empty_category"><td colspan="8"> Empty Category </td></tr></tbody>
+    </table>
+  </div>  <!--List Box ENDS-->
+</form>
+</body>
+</html>

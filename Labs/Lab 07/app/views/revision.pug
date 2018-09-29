@@ -1,0 +1,25 @@
+doctype html
+
+html(lang="en")
+head
+	title  Revision
+	link(rel='stylesheet'
+		 type='text/css'
+		 href='/css/tablestyle.css'
+		 media='screen')
+body
+	h2 The Latest Revision of #{title}
+	table
+		tr
+			th Field Name
+			th value
+		
+		tr
+			td title
+			td #{revision.title}
+		tr
+			td user
+			td #{revision.user}
+		tr
+			td timestamp
+			td #{revision.timestamp}

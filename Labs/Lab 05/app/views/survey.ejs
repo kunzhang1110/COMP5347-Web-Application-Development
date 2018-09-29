@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/surveystyle.css" media="screen" />
+</head>
+<body>
+  <h2>Welcome to the Mobile Purchasing Survey</h2>
+  <form method = "POST" action="survey">
+    <fieldset><!--used to group related elements in a form.-->
+      <legend>Mobile Purchasing Survey</legend>
+      
+      <h4>Your Gender: </h4>
+        <label>
+          <input type="radio" name="gender" value = 1 checked="checked"/>
+            Female
+        </label> <br />
+        <label>
+          <input type="radio" name="gender" value = 0 />
+          Male
+        </label> <br />
+      
+      <h4>What would be your next mobile?</h4>
+        <% for (var i = 0; i<products.length;i++){%>
+        <label>
+          <input type="radio" name="vote" value= "<%= i%>" />
+	         <%= products[i]%>
+        </label> <br />
+        <% } %>
+        <input type = "submit" value = "Submit Vote" />
+        <input type = "reset" value = "Clear Vote Form" />
+    </fieldset>
+  </form>
+</body>
+</html>

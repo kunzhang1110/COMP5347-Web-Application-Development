@@ -1,0 +1,20 @@
+body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12px;
+}
+h2{
+color:maroon;	
+text-align: center;				
+}
+fieldset {
+   margin: 1em auto;
+   background-color: #FAFCFF;
+   width: 60%;
+}
+#result{
+   margin: 1em auto;
+   border: solid 1pt black;
+   padding: 5pt;
+   background-color: #FAFCFF;
+   width: 60%;
+}

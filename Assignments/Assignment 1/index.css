@@ -1,0 +1,96 @@
+﻿/* general text formatting */
+
+h1, h2, h3, nav, footer {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 80%;
+}
+
+div#searchBox, div#listBox {
+   margin: 0.25em auto;
+   background-color: #EBF4FB;
+   padding: 1em;
+   border: 1pt solid #95BEF0;
+   width: 80%;
+   border-radius: 5px;
+   position: relative;
+}
+div#searchBox { margin-top: 1em; }
+div#listBox {
+   margin-top: 1em;
+   background-color: #FAFCFF;
+   overflow-x:auto; /*responsive*/
+   }
+
+table {
+   border: collapse;
+   border-spacing: 0;
+   width:100%;  /*prevent auto-shrink*/
+}
+
+table tbody td{
+   border-top: 1pt solid #95BEF0;
+   line-height: 1.5em;
+   text-align: center;
+   padding: 0.5em 0.75em;
+}
+table thead th {
+   text-align: center;
+   padding: 0.25em 0.75em;
+}
+table thead {
+   background-color: #EBF4FB ;
+}
+
+table tbody td:first-child  {
+   text-align: center;
+   padding: 0.5em 0em;
+}
+
+caption {
+   background-color: #95BEF0;
+   padding: 0.5em 0.5em;
+   font-weight: bold;
+   font-size: 1.2em;
+
+}
+
+/*Custom CSS*/
+.searchBox_right{
+  float:right;
+  margin-left: 0.15em；
+  top:0.8rem;
+}
+
+/*
+img#shopping-cart {
+  margin-left:0.5em;
+}
+*/
+
+svg#shopping-cart {
+  margin-left:0.5em;
+  margin-top:0.1em;
+  fill:none;
+  stroke:black;
+  stroke-width:2;
+}
+
+span#cart_number{
+  margin-left:0.15em;
+  font-size: 1.5em;
+}
+
+#add_button{
+  margin-right:0.2rem;
+}
+
+/*media queries*/
+@media (max-width:968px){
+  #search_textbox, #category{
+    display: block;
+    margin: 0.15em 0 0.15em 0;
+  }
+}

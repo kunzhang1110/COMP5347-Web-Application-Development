@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/surveystyle.css" media="screen" />
+
+</head>
+<body>
+<% if (voted == 0){%>
+  <h2> Thank you for participating in the Mobile Purchasing Survey!</h2>
+<% } else {%>
+  <h2> We are sorry you cannot vote more than once</h2>
+<% } %>
+  <h2> You voted for <%= products[productidx]%></h2>
+<div id='result'>
+<h4> Current Survey Results: </h4>
+
+<!-- 
+The survey result is having the following format:
+surveyresults:{
+fp:[0,1,3,4],
+mp:[1,0,2,0]
+}
+--> 
+<h5> For Female Respondents</h5>
+  <% for (var i = 0; i<products.length;i++){%>
+    <p><%= products[i]%>: <%= surveyresults.fp[i]%></p>
+  <% } %>
+<h5> For Male Respondents</h5>
+  <% for (var i = 0; i<products.length;i++){%>
+    <p><%= products[i]%>: <%= surveyresults.mp[i]%></p>
+  <% } %>
+</div>
+</body>
+</html>

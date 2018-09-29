@@ -1,0 +1,135 @@
+﻿/* general text formatting */
+
+h1, h2, h3, nav, footer {
+ font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+body {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+ font-size: 100%;
+ background-color: #213643;
+}
+h1 {
+  font-size: 24px; /* older browsers */
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 14px;
+  font-size: 0.75rem;
+}
+h3 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  border-bottom: solid 1pt #999999;
+  margin: 0 0 0.5em 0;
+}
+p {
+  font-size: 16px;
+  font-size: 1rem;
+}
+nav {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/* link styling */
+
+a:link {
+   font-weight: bold;
+   color: #47B3D7;
+}
+a:visited {
+   color: #BB78FF;
+}
+a:hover {
+   background-color: #FFFFCC;
+}
+
+
+/* header and navigation */
+
+header, footer {
+  color: white;
+  background-color: #3D6271;
+  margin: 0em 4em 0.5em 4em;
+}
+hgroup {
+  padding: 0.5em;
+}
+nav {
+  background-color: #728B96;
+}
+nav ul li {
+   list-style: none;
+   display: inline;
+}
+nav {
+   padding: 0.25em;
+}
+nav a {
+   padding: 0.25em;
+}
+
+/* article styling */
+article {
+   background-color: white;
+   margin: 1em 4em 1em 4em;
+   padding: 0.5em;
+}
+.byline, figcaption {
+   color: #728B96;
+   font-style: italic;
+  font-size: 14px;
+  font-size: .875rem;
+}
+/* figure styling */
+
+figure {
+   margin: 0.5em 0 0.5em 0;
+}
+figure img {
+   padding: 0.25em;
+   border: solid 1px #999999;
+}
+
+/* share styling */
+p#share {
+   margin: 0.25em 0 2em 0;
+   padding: 0.5em;
+   width: 485px;
+   background-color: #9FAAB0;
+   border-radius: 4px;
+   background-image: url(images/gray-gradient.gif);
+   background-repeat: repeat-x;
+}
+
+/*related photos styling*/
+#relatedphotos ul{
+  display: inline-block;
+  list-style-type: none;
+  margin:1px 0px;
+  padding:0.25em;
+}
+
+#relatedphotos ul li{
+  float:left;
+  margin:1px 2px;
+}
+
+/* review styling */
+#reviews {
+   margin-top: 1em;
+}
+#reviews div {
+   border-bottom: dotted 1pt #999999;
+   margin-bottom: 1.25em;
+}
+#reviews p {
+   margin: 0;
+}
+
+/* footer styling */
+footer p {
+  font-size: 14px;
+  font-size: .875rem;
+}
